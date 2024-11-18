@@ -18,13 +18,12 @@ getUserNameVowels(<ID пользователя>),
 - Результат через REST endpoint доступен по ссылке https://cc4dev2dht.pp.ua/rest/1/rr94o1o8cu1wolqf/get.username.vowels/?USER_ID=1 
 - Результат через BX.ajax.runAction доступен по ссылке https://cc4dev2dht.pp.ua/dev/ либо выполнением кода где USER_ID - идентификатор пользователя
 
-
-    BX.ready(function(){
-      BX.ajax.runAction('infuse:dataprocessor.api.MainDataProcessorController.getUserNameVowels', {
-        data: { USER_ID:2,}
-      }).then(function(response) {
-        console.log(response.data);
-      }, function(error) {
-        console.error('Error:', error);
-      });
-    });
+BX.ready(function(){
+  BX.ajax.runAction('infuse:dataprocessor.api.MainDataProcessorController.getUserNameVowels', {
+    data: { USER_ID:2,}
+  }).then(function(response) {
+    console.log(response.data);
+  }, function(error) {
+    console.error('Error:', error);
+  });
+});
