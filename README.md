@@ -17,7 +17,7 @@ getUserNameVowels(<ID пользователя>),
 - Основной класс MainDataProcessor и требуемым методом getUserNameVowels путь к файлу: local/modules/infuse.dataprocessor/lib/Core/MainDataProcessor.php
 - Результат через REST endpoint доступен по ссылке https://cc4dev2dht.pp.ua/rest/1/rr94o1o8cu1wolqf/get.username.vowels/?USER_ID=1 
 - Результат через BX.ajax.runAction доступен по ссылке https://cc4dev2dht.pp.ua/dev/ либо выполнением кода где USER_ID - идентификатор пользователя
-
+```
 BX.ready(function(){
   BX.ajax.runAction('infuse:dataprocessor.api.MainDataProcessorController.getUserNameVowels', {
     data: { USER_ID:2,}
@@ -27,3 +27,4 @@ BX.ready(function(){
     console.error('Error:', error);
   });
 });
+```
